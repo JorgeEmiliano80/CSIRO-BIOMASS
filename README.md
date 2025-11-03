@@ -9,7 +9,7 @@ El proyecto predice 5 componentes de biomasa a partir de imagenes aereas de past
 
 ## 🎯  Objetivos del Proyecto
 
-# Variables a Predecir (Targets)
+### Variables a Predecir (Targets)
 
 Variable | Descripción | Peso en Score |
 
