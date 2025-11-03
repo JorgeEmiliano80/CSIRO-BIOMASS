@@ -7,86 +7,12 @@ Sistema de prediccion de biomasa de pastizales usando vision por computadora y d
 El proyecto predice 5 componentes de biomasa a partir de imagenes aereas de pastizales australianos.
 
 
-image2biomass/
-│
-├── 📂 data/                          # Datos del proyecto
-│   ├── raw/                          # Datos originales (train.csv, test.csv)
-│   ├── processed/                    # Datos procesados listos para entrenamiento
-│   └── augmented/                    # Datos con data augmentation aplicado
-│
-├── 📂 src/                           # Código fuente
-│   ├── data/                         # Scripts de carga y procesamiento de datos
-│   │   ├── __init__.py
-│   │   ├── dataset.py               # PyTorch Dataset personalizado
-│   │   ├── dataloader.py            # DataLoaders y splits
-│   │   └── preprocessing.py         # Preprocesamiento de imágenes
-│   │
-│   ├── models/                       # Arquitecturas de modelos
-│   │   ├── __init__.py
-│   │   ├── baseline.py              # Modelo baseline simple
-│   │   ├── cnn_simple.py            # CNN básica
-│   │   ├── resnet_model.py          # ResNet con transfer learning
-│   │   ├── efficientnet_model.py    # EfficientNet con transfer learning
-│   │   └── ensemble.py              # Ensemble de modelos
-│   │
-│   ├── features/                     # Ingeniería de características
-│   │   ├── __init__.py
-│   │   ├── image_features.py        # Extracción de features de imágenes
-│   │   ├── tabular_features.py      # Features tabulares (NDVI, altura, etc.)
-│   │   └── augmentation.py          # Data augmentation
-│   │
-│   ├── training/                     # Scripts de entrenamiento
-│   │   ├── __init__.py
-│   │   ├── trainer.py               # Clase Trainer principal
-│   │   ├── losses.py                # Funciones de pérdida personalizadas
-│   │   └── callbacks.py             # Callbacks (early stopping, etc.)
-│   │
-│   ├── evaluation/                   # Evaluación y métricas
-│   │   ├── __init__.py
-│   │   ├── metrics.py               # R², MAE, RMSE, etc.
-│   │   └── visualization.py         # Visualización de resultados
-│   │
-│   └── utils/                        # Utilidades
-│       ├── __init__.py
-│       ├── config.py                # Configuraciones
-│       ├── logger.py                # Sistema de logging
-│       └── helpers.py               # Funciones auxiliares
-│
-├── 📂 models/                        # Modelos guardados
-│   ├── checkpoints/                 # Checkpoints durante entrenamiento
-│   └── final/                       # Modelos finales entrenados
-│
-├── 📂 outputs/                       # Salidas del proyecto
-│   ├── predictions/                 # Predicciones en formato CSV
-│   ├── visualizations/              # Gráficos y visualizaciones
-│   └── reports/                     # Reportes de experimentos
-│
-├── 📂 configs/                       # Archivos de configuración
-│   ├── config_baseline.yaml         # Config modelo baseline
-│   ├── config_resnet.yaml           # Config ResNet
-│   └── config_ensemble.yaml         # Config ensemble
-│
-├── 📂 notebooks/                     # Jupyter Notebooks
-│   ├── eda/                         # Análisis exploratorio
-│   │   └── 01_exploratory_analysis.ipynb
-│   └── experiments/                 # Experimentos
-│       ├── 02_baseline_experiments.ipynb
-│       └── 03_deep_learning_experiments.ipynb
-│
-├── 📂 logs/                          # Logs de entrenamiento
-│
-├── 📜 requirements.txt               # Dependencias Python
-├── 📜 README.md                      # Este archivo
-├── 📜 train.py                       # Script principal de entrenamiento
-├── 📜 predict.py                     # Script para generar predicciones
-└── 📜 evaluate.py                    # Script para evaluar modelos
-
-
-## 🎯  Objetivos del Proeycto
+## 🎯  Objetivos del Proyecto
 
 # Variables a Predecir (Targets)
 
 Variable | Descripción | Peso en Score |
+
 Dry_Green_g | Vegetación verde seca (sin trébol) | 0.1 |
 Dry_Dead_g | Material muerto seco | 0.1 |
 Dry_Clover_g | Biomasa de trébol seco | 0.1 |
@@ -214,8 +140,6 @@ Tasmania tiene más muestras (138 imágenes)
 Ryegrass_Clover es la especie dominante
 
 
-
-
 📝 Notas Importantes
 
 Las predicciones deben respetar las relaciones matemáticas entre targets
@@ -230,5 +154,4 @@ JORGE EMILIANO - DATA SCIENTIST Ssr.
 
 🎓 Referencias
 
-Paper original: arXiv:2510.22916
 Competición: CSIRO - Image2Biomass Prediction
